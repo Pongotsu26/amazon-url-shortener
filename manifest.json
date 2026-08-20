@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon URL Shortener",
+  "version": "1.0.1",
+  "description": "Amazon.co.jpの商品URLをhttps://www.amazon.co.jp/dp/ASIN形式に整えます。",
+  "permissions": [
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.amazon.co.jp/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
