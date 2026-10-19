@@ -15,6 +15,7 @@ https://www.amazon.co.jp/dp/ASIN
 - 上記形式のAmazon.co.jpサブドメイン
 
 商品ページではないURL、検索結果、Amazon.co.jp以外のAmazonドメインは変更しません。
+短縮URLへの移動では現在の履歴を置き換えるため、ブラウザの「戻る」1回で直前のページへ戻れます。
 
 ## Chromeへの追加
 
@@ -23,10 +24,12 @@ https://www.amazon.co.jp/dp/ASIN
 3. 「パッケージ化されていない拡張機能を読み込む」をクリックする
 4. この `AmazonShortener` フォルダを選択する
 
+変更を反映する場合は `chrome://extensions` でこの拡張機能の再読み込みボタンを押してください。
+
 ## テスト
 
-Node.jsがあれば、URL変換ロジックを次のコマンドで確認できます。
+Node.jsがあれば、URL変換と履歴を増やさないリダイレクト処理を次のコマンドで確認できます。
 
 ```bash
-node --test tests/url-utils.test.js
+node --test tests/*.test.js
 ```
